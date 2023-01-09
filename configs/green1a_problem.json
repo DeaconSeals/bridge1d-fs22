@@ -1,0 +1,1 @@
+{"material": "carbon fiber", "solid": true, "width": 0.125, "fixed_points": [[0, 0], [150, 0]], "load_points": [[20, 0], [40, 0], [60, 0], [80, 0], [100, 0], [120, 0], [140, 0]], "connection_distance": 30, "weight_resolution": 500000, "relax_gravity": false}

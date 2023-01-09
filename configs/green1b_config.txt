@@ -1,0 +1,35 @@
+[fitness_kwargs]
+material = carbon fiber
+solid = True
+width = 0.125
+fixed_points = [(0, 0), (140, 0), (70, -30)]
+load_points = [(20, 0), (40, 0), (60, 0), (80, 0), (100, 0), (120, 0)]
+connection_distance = 20
+weight_resolution = 500000
+relax_gravity = False
+
+[EA_configs]
+mu = 4955
+num_children = 1
+mutation_rate = 0.2
+individual_class = LinearGenotype
+parent_selection = k_tournament_with_replacement
+survival_selection = truncation
+
+[initialization_kwargs]
+length = 30
+x_bounds = [0, 140]
+y_bounds = [-20, 20]
+
+[parent_selection_kwargs]
+k = 1
+
+[recombination_kwargs]
+method = 1-point crossover
+
+[mutation_kwargs]
+x_bounds = ${initialization_kwargs:x_bounds} # We can reference other config values and add comments
+y_bounds = ${initialization_kwargs:y_bounds}
+
+[survival_selection_kwargs]
+k = 1
